@@ -5,6 +5,13 @@ const mysql = require('promise-mysql');
 const bodyParser = require('body-parser');
 const moment = require('moment');
 
+const WITHDRAWAL_TRANSACTION_TYPE =  1;
+const DEPOSIT_TRANSACTION_TYPE =  2;
+const TRANSFER_TRANSACTION_TYPE =  3;
+const RECURRING_TRANSFER_TRANSACTION_TYPE =  4;
+const ACTIVE_ACCOUNT = 'active';
+
+
 const app = express();
 app.set('view engine', 'pug');
 app.enable('trust proxy');
